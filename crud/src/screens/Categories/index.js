@@ -9,12 +9,11 @@ import { useState, useEffect } from "react";
 
 export const Categories = () => {
   const navigation = useNavigation();
+  const [category, setCategory] = useState([]);
 
   const renderItem = ({ item }) => (
     <ItemCategory name={item.nome} photo={item.foto} />
   );
-
-  const [category, setCategory] = useState([]);
 
   useEffect(() => {
     getCategories();
@@ -25,9 +24,13 @@ export const Categories = () => {
     setCategory(data);
   };
 
+  function goBack() {
+    navigation.goBack();
+  };
+
   return (
     <MainContainer>
-      <Header />
+      <Header title={"categorias"} iconName={"arrow-back"} goBack={goBack} />
       <PlusButton onPress={() => navigation.navigate("CategoryRegister")} />
       <FlatList
         data={category}

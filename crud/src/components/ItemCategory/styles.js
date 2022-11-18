@@ -35,3 +35,14 @@ export const Name = styled.Text`
   font-weight: bold;
   font-size: 14px;
 `;
+
+export const ButtonsContainer = styled.View`
+    flex-direction: row;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+`;
+
+export const Button = styled.TouchableOpacity`
+  margin: 0 10px 0;
+`;
