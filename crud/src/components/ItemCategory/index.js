@@ -1,7 +1,7 @@
 import { MaterialIcons, FontAwesome5 } from "@expo/vector-icons";
 import { useContext } from "react";
-import { useNavigation } from "react-navigation/native";
-import { Api } from "../../services";
+import { useNavigation } from "@react-navigation/native";
+import { Api } from "../../services/index.js";
 import colors from "../../themes/colors";
 import { Card, Photo, TextContainer, Name, CustomButton, ButtonsContainer } from "./styles";
 import { IdContext } from "../../context/index.js";
@@ -12,7 +12,7 @@ export const ItemCategory = ({ name, photo }) => {
   const navigation = useNavigation();
 
   function deleteItem(id) {
-    Api.deleteItem(`/categoria/${id}`)
+    Api.delete(`/categoria/${id}`)
       .then(() => {
         alert("Item excluido com sucesso!");
         navigation.navigate("Categories");

@@ -43,6 +43,6 @@ export const ButtonsContainer = styled.View`
     right: 20px;
 `;
 
-export const Button = styled.TouchableOpacity`
+export const CustomButton = styled.TouchableOpacity`
   margin: 0 10px 0;
 `;
