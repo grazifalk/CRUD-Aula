@@ -9,7 +9,7 @@ export function StackRoutes() {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShow: false,
+        headerShown: false,
       }}
     >
       <Stack.Screen name="Categories" component={Categories} />
