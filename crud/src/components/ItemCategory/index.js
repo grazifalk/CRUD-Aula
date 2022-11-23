@@ -6,7 +6,7 @@ import colors from "../../themes/colors";
 import { Card, Photo, TextContainer, Name, CustomButton, ButtonsContainer } from "./styles";
 import { IdContext } from "../../context/index.js";
 
-export const ItemCategory = ({ name, photo }) => {
+export const ItemCategory = ({ name, photo, id }) => {
 
   const { setId } = useContext(IdContext)
   const navigation = useNavigation();
@@ -29,7 +29,7 @@ export const ItemCategory = ({ name, photo }) => {
     <Card>
       <Photo source={{ uri: photo }} />
       <TextContainer>
-        <Name>{name}</Name>
+        <Name>{id}.{name}</Name>
       </TextContainer>
       <ButtonsContainer>
         <CustomButton onPress={() => deleteItem(id)}>

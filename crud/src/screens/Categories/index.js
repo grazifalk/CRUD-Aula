@@ -12,7 +12,7 @@ export const Categories = () => {
   const [category, setCategory] = useState([]);
 
   const renderItem = ({ item }) => (
-    <ItemCategory name={item.nome} photo={item.foto} />
+    <ItemCategory name={item.nome} photo={item.foto} id={item.id} />
   );
 
   useEffect(() => {

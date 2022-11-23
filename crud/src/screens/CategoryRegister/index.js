@@ -17,7 +17,7 @@ export const CategoryRegister = ({navigation}) => {
         };
 
         Api.post("/categoria", data)
-           .then((res) => {
+           .then(() => {
                 alert("Item Cadastrado com sucesso!");
                 navigation.goBack();
            });
